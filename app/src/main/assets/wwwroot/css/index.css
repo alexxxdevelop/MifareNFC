@@ -1,0 +1,23 @@
+.field { width: 320px; text-align: left; position: relative; margin: 5px; padding: 10px; border: 1px solid #454545; border-radius: 5px; }
+.num { margin: 10px 0; display: inline-block; background: #25282b; border-radius: 3px; padding: 10px 0; }
+.num a { width: 15px; height: 15px; display: inline-block; margin: 0 20px; }
+.num a.up { background: url(../img/up_arrow.png) 0/15px no-repeat; }
+.num a.down { background: url(../img/down_arrow.png) 0/15px no-repeat; }
+
+.item-number { font-size: 48px; }
+.item-number1 { font-size: 150px; font-weight: lighter; font-weight: bold; }
+.border { border-radius: 10px; border: 1px solid #ab6e00; padding: 20px; text-align: center; margin: 40px; }
+
+.accordion.acc-close h3 { background: url(../img/plus.png) 0 9px/16px no-repeat; padding-left: 25px; }
+.accordion.acc-open h3 { background: url(../img/minus.png) 0 9px/16px no-repeat; padding-left: 25px; }
+.accordion-body { display: none;}
+
+.cont-text { font-size: 30px; }
+.nfc-panel { width: auto; padding: 20px 5px; margin: 20px 5px; }
+
+@media only screen and (max-width: 787px) {
+    #text_center_div { width: 80% !important; }
+    #right_panel { display: none; }
+    #logo_mobile { display: flex !important; }
+    .item-number1 { font-size: 100px; }
+}

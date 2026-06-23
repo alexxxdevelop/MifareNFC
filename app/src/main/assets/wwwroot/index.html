@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/jquery.minicolors.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.minicolors.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <small class="debug" style="position: absolute; right: 10px; bottom: 10px; display: none">v4.5</small>
+    <div class="h100">
+        <div class="flex h100">
+            <div class="h100 flex flex-column flex-mobile">
+                <div id="logo_mobile" class="flex" style="display: none; width: 100%">
+                    <div class="center" style="padding: 5px; display: none">
+                        <div class="time" style="font-size: 20px"></div>
+                        <div class="date" style="font-size: 14px"></div>
+                    </div>
+                    <div class="flex1"></div>
+                    <div><img src="img/logo.png" style="width: 140px" /></div>
+                </div>
+                <div id="log" style="word-wrap: break-word; width: 100%;"></div>
+                <div class="flex1 center-items"><img id="logo_img" style="width: 200px; margin: 20px 50px" /></div>
+                <div class="flex1 center-items"><div id="text_center_div" class="border" style="font-size: 30px; width: 400px;"></div></div>
+                <div class="flex1 center-items" style="padding: 30px 0">
+                    <svg version="1.1" class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 60" style="enable-background:new 0 0 40 40; height: 200px; position: relative;" xml:space="preserve">
+                    <g>
+                    <path d="M40,16.5c0,2.4,0,2.3-1.9,3.9c-2.7,2.3-5.3,4.6-8,6.9c-2.6,2.2-5.2,4.5-7.8,6.7c-0.6,0.5-1.2,1-1.8,1.6
+            c-0.4,0.4-0.8,0.4-1.2,0c-1.6-1.4-3.3-2.8-4.9-4.3c-3.2-2.8-6.5-5.6-9.7-8.4c-1.4-1.2-2.9-2.5-4.3-3.7c-0.3-0.3-0.5-0.6-0.4-1
+            c0-1.2,0-2.4,0-3.5c0-0.2,0-0.5,0.3-0.6C0.6,13.8,0.8,14,1,14.1c1.9,1.6,3.7,3.2,5.6,4.8c2.7,2.3,5.4,4.7,8.1,7
+            c1.7,1.4,3.3,2.8,5,4.3c0.3,0.3,0.5,0.2,0.8,0c2.4-2.1,4.8-4.2,7.2-6.3c2.5-2.2,5-4.3,7.5-6.5c1.3-1.1,2.6-2.2,3.9-3.4
+            c0.2-0.2,0.4-0.4,0.7-0.3c0.3,0.1,0.3,0.4,0.3,0.7C40,15.2,40,15.9,40,16.5z" fill="#fff">
+                    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,25; 0,0" dur="1s" repeatCount="indefinite" />
+        </path>
+                    <path d="M40,6.8c0,2.4,0,2.3-1.9,3.9c-2.7,2.3-5.3,4.6-8,6.9c-2.6,2.2-5.2,4.5-7.8,6.7c-0.6,0.5-1.2,1-1.8,1.6
+            c-0.4,0.4-0.8,0.4-1.2,0c-1.6-1.4-3.3-2.8-4.9-4.3C11.2,18.8,8,16,4.8,13.2c-1.4-1.2-2.9-2.5-4.3-3.7C0.1,9.2,0,8.8,0,8.4
+            C0,7.2,0,6,0,4.9c0-0.2,0-0.5,0.3-0.6C0.6,4.1,0.8,4.3,1,4.5c1.9,1.6,3.7,3.2,5.6,4.8c2.7,2.3,5.4,4.7,8.1,7c1.7,1.4,3.3,2.8,5,4.3
+            c0.3,0.3,0.5,0.2,0.8,0c2.4-2.1,4.8-4.2,7.2-6.3c2.5-2.2,5-4.3,7.5-6.5c1.3-1.1,2.6-2.2,3.9-3.4c0.2-0.2,0.4-0.4,0.7-0.3
+            c0.3,0.1,0.3,0.4,0.3,0.7C40,4.4,40,4.7,40,4.9C40,5.6,40,6.2,40,6.8z" fill="#fff">
+                    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,25; 0,0" dur="1s" repeatCount="indefinite" />
+        </path>
+    </g>
+</svg>
+                </div>
+            </div>
+            <div class="flex1 h100 flex flex-column" id="right_panel">
+                <div class="w100">
+                    <div class="flex" style="padding: 20px 50px">
+                        <div class="flex1"></div>
+                        <div class="center">
+                            <div id="text_righttop_div"></div>
+                            <div><img src="img/logo.png" style="width: 140px" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex1 center-items flex" style="align-items: stretch">
+                    <div id="video" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; margin: 0 40px"></div>
+                </div>
+                <div class="w100 center-items">
+                    <div class="center" style="padding: 20px">
+                        <div class="time" style="font-size: 60px"></div>
+                        <div class="date" style="font-size: 24px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="buttons" style="position: fixed; bottom: -100px; left: 0; right: 0; padding: 20px; background: #000; height: 60px">
+            <div class="flex flex-mobile">
+                <a onclick="$('#buttons').animate({ bottom: -100 }); showDialog('#pass_div'); $('#pass1').val('')">ВОЙТИ</a>
+                <div class="flex1"></div>
+                <div>Настройки</div>
+            </div>
+        </div>
+
+        <div id="pass_div" class="modals" style="display: none">
+            <div class="modal" style="width: 30%; min-width: 300px">
+                <h2>Пароль</h2>
+                <div id="error_pass" class="red" style="display: none">Неверный пароль</div>
+                <div><input type="text" id="pass1" /></div>
+                <div><button class="btn btn-green" onclick="passConfirm()">OK</button></div>
+            </div>
+        </div>
+        <div id="admin" class="modals" style="display: flex">
+            <div class="modal">
+                <h2>Настройки</h2>
+                <div class="tabs" style="overflow: auto; flex: 1; display: flex; flex-direction: column;">
+                    <ul><li>Дизайн</li><li>Интерфейс</li><li>RFID</li><li>Система</li></ul>
+                    <div>
+                        <div class="form-container">
+                            <div class="form" style="padding-bottom: 500px">
+                                <div id="set2_div"><div>Логотип объекта</div><div><div class="flex flex-center"><input type="checkbox" id="set2" /><button class="btn" onclick="showLogo()">Обзор...</button><div class="nowrap-container"><div id="logo" class="flex1 nowrap" style="margin: 0 10px"></div></div></div></div></div>
+                                <div id="set9_div"><div>Цвет рамок</div><div><input type="checkbox" id="set9" /><input type="text" id="border_color" /></div></div>
+                                <div id="set10_div"><div>Цвет стрелки</div><div><input type="checkbox" id="set10" /><input type="text" id="arrow_color" /></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-container">
+                            <div class="form" style="padding-bottom: 500px">
+                                <div id="set3_div"><div>Папка media</div><div><div class="flex flex-center"><input type="checkbox" id="set3" /><button class="btn" onclick="showMedia(102)">Обзор...</button><div class="nowrap-container"><input type="text" id="media" class="flex1 nowrap" style="margin-left: 10px; width: calc(100% - 10px)" /></div></div></div></div>
+                                <div id="set4_div"><div>Информационная надпись NFC</div><div><input type="checkbox" id="set4" /><input type="text" id="text_center" /></div></div>
+                                <div id="set5_div"><div>Надпись справа вверху</div><div><input type="checkbox" id="set5" /><input type="text" id="text_righttop" /></div></div>
+                                <div id="set6_div"><div>Время отображения информации, сек</div><div><input type="checkbox" id="set6" /><input type="text" id="text_time" /></div></div>
+                                <div id="set7_div"><div>Время отображения статической картинки, сек</div><div><input type="checkbox" id="set7" /><input type="text" id="static_img_secs" /></div></div>
+                                <div id="set8_div"><div>Частота опроса контента media, мин</div><div><input type="checkbox" id="set8" /><input type="text" id="media_mins" /></div></div>
+                                <section class="deviceType1 form">
+                                    <div id="set21_div"><div>Надпись Выход запрещен</div><div><input type="checkbox" id="set21" /><input type="text" id="cont_text1" /></div></div>
+                                    <div id="set22_div"><div>Надпись Освободите</div><div><input type="checkbox" id="set22" /><input type="text" id="cont_text2" /></div></div>
+                                    <div id="set23_div"><div>Надпись Обработка</div><div><input type="checkbox" id="set23" /><input type="text" id="cont_text3" /></div></div>
+                                    <div id="set24_div"><div>Надпись Проходите</div><div><input type="checkbox" id="set24" /><input type="text" id="cont_text4" /></div></div>
+                                    <div id="set25_div"><div>Надпись Обратитесь</div><div><input type="checkbox" id="set25" /><input type="text" id="cont_text5" /></div></div>
+                                    <div id="set26_div"><div>Время отображения надписей, сек</div><div><input type="checkbox" id="set26" /><input type="text" id="cont_text_secs" /></div></div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-container">
+                            <div class="form" style="padding-bottom: 500px">
+                                <div id="set1_div"><div>Тип устройства</div><div><input type="checkbox" id="set1" /><select id="deviceType"><option value="0">Инфотерминал</option><option value="1">Контроллер выхода</option></select></div></div>
+                                <section class="deviceType1 form">
+                                    <div id="set20_div"><div>Время ожидания сигнала GPIO, сек</div><div><input type="checkbox" id="set20" /><input type="text" id="cont_wait_gpio" /></div></div>
+                                    <div id="set27_div"><div>Порядок байтов Wiegand</div><div><input type="checkbox" id="set27" /><select id="wiegandOrder"><option value="0">Прямой</option><option value="1">Обратный</option></select></div></div>
+                                    <div id="set28_div"><div></div><div><label><input type="checkbox" id="debugMode" /> Режим разработчика</label></div></div>
+                                    <div id="set29_div"><div>Режим Wiegand</div><div><input type="checkbox" id="set29" /><select id="wiegandMode"><option value="0">Wiegand-34</option><option value="1">Wiegand-26</option></select></div></div>
+                                    <div id="set30_div"><div>Скорость порта</div><div><input type="checkbox" id="set30" /><select id="portSpeed"><option value="9600">9600</option><option value="115200">115200</option></select></div></div>
+                                </section>
+                                <div id="set14_div">
+                                    <div>Поля для считывания</div>
+                                    <div>
+                                        <div>
+                                            <input type="checkbox" id="set14" />
+                                            <select id="algo"><option value="0">Universal</option><option value="1">CxxxMFI</option><option value="2">CM-xxxxMFIx</option></select>
+                                        </div>
+                                        <div id="algo0" class="algo">
+                                            <div style="text-align: left"><button class="btn" onclick="addField()">Добавить</button></div>
+                                            <div id="fields" class="flex flex-wrap"></div>
+                                        </div>
+                                        <div id="algo1" class="algo">
+                                            <div style="text-align: left"><button class="btn" onclick="addField1()">Добавить</button></div>
+                                            <div id="fields1" class="flex flex-wrap"></div>
+                                        </div>
+                                        <div id="algo2" class="algo">
+                                            <div class="flex flex-center" style="gap: 10px">
+                                                <a class="btn" target="_blank" href="https://oauth.yandex.ru/authorize?response_type=token&client_id=658dbc114df444c497382b71e3641ca2">Получить токен</a>
+                                                <input type="text" id="yandexToken" placeholder="Токен" style="width: auto; flex: 1" />
+                                            </div>
+                                            <div class="flex" style="gap: 10px">
+                                                <button class="btn" onclick="showMedia(103)">Обзор...</button>
+                                                <input type="text" id="yandexFolder" placeholder="Путь к папке на яндекс-диске (/Батареи)" style="width: auto; flex: 1" />
+                                            </div>
+                                            <div style="text-align: left"><button class="btn" onclick="addField2()">Добавить поле</button></div>
+                                            <div id="fields2" class="flex flex-wrap"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form" style="padding-bottom: 500px">
+                            <div><div>Пароль</div><div><input type="text" id="pass2" /></div></div>
+                            <div id="pass2_service_div"><div>Пароль админа</div><div><input type="text" id="pass2_service" /></div></div>
+                            <div id="set11_div"><div>Настройки wi-fi</div><div><input type="checkbox" id="set11" /><button class="btn" onclick="Android.openWifi()">Открыть</button></div></div>
+                            <div id="set12_div"><div>Настройки даты и времени</div><div><input type="checkbox" id="set12" /><button class="btn" onclick="Android.openDatetime()">Открыть</button></div></div>
+                            <div id="set13_div"><div>Настройки Android</div><div><input type="checkbox" id="set13" /><button class="btn" onclick="Android.openSettings()">Открыть</button></div></div>
+                            <div id="set15_div"><div></div><div><input type="checkbox" id="set15" /><button class="btn" onclick="saveSettingsToFile()">Сохранить в файл</button></div></div>
+                            <div id="set16_div"><div></div><div><input type="checkbox" id="set16" /><button class="btn" onclick="loadSettingsFromFile()">Загрузить из файла</button></div></div>
+                            <div><div></div><div><label><input type="checkbox" id="statusBar" /> Скрыть панель статуса</label></div></div>
+                            <div><div></div><div><label><input type="checkbox" id="navigationBar" /> Скрыть панель навигации</label></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-center">
+                    <div class="flex1"></div>
+                    <div><button class="btn btn-green" onclick="saveSettings()">Сохранить</button></div>
+                    <div class="flex1"></div>
+                    <div><button id="exitAndroid" class="btn btn-red" onclick="exitAndroid()" style="zoom: 0.7; display: none">Выйти в Android</button></div>
+                </div>
+            </div>
+        </div>
+        <div id="nfc_dialog" class="modals flex flex-column flex-mobile" style="display: none">
+            <div class="modal center-items" style="height: 85%">
+                <div id="nfc_html_cont" class="flex1 center-items" style="display: none"></div>
+                <div id="nfc_html" class="flex1 flex flex-mobile"></div>
+            </div>
+        </div>
+        <div id="field_template" class="field" style="display: none">
+            <div>Наименование поля</div>
+            <div><input type="text" class="field-name" /></div>
+            <div>Надпись при отсутствии данных</div>
+            <div><input type="text" class="field-name1" /></div>
+            <div>Номер сектора (от 0 до 39)</div>
+            <div class="field-sector num" data-min="0" data-max="39">0</div>
+            <div>Номер блока (от 0 до 3)</div>
+            <div class="field-block num" data-min="0" data-max="3">0</div>
+            <div>Интервал байт</div>
+            <div><div class="field-byte1 num" data-min="0" data-max="15">0</div> - <div class="field-byte2 num" data-min="0" data-max="15">0</div></div>
+            <div>Ключ А (12-значный HEX)</div>
+            <div><input type="text" class="field-key" value="FFFFFFFFFFFF" /></div>
+            <div>Конвертация байт</div>
+            <div><select class="field-conv"><option value="0">С конвертацией</option><option value="1">Без конвертации</option></select></div>
+            <a class="close" onclick="$(this).parent().remove()" style="top: 5px; right: 5px"></a>
+        </div>
+        <div id="field_template1" class="field" style="display: none">
+            <div>Наименование поля</div>
+            <div><input type="text" class="field-name" /></div>
+            <div>Надпись при отсутствии данных</div>
+            <div><input type="text" class="field-name1" /></div>
+            <div>Номер сектора (от 0 до 39)</div>
+            <div class="field-sector num" data-min="0" data-max="39">0</div>
+            <a class="close" onclick="$(this).parent().remove()" style="top: 5px; right: 5px"></a>
+        </div>
+        <div id="field_template2" class="field" style="display: none">
+            <div>Наименование поля</div>
+            <div><input type="text" class="field-name" /></div>
+            <div>Надпись при отсутствии данных</div>
+            <div><input type="text" class="field-name1" /></div>
+            <div>Номер сектора (от 1 до 15)</div>
+            <div class="field-sector num" data-min="1" data-max="15">1</div>
+            <div>Ключ А (12-значный HEX)</div>
+            <div><input type="text" class="field-key" value="FFFFFFFFFFFF" /></div>
+            <a class="close" onclick="$(this).parent().remove()" style="top: 5px; right: 5px"></a>
+        </div>
+        <div id="arrow_up" style="display: none">
+            <svg version="1.1" class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 60" style="enable-background:new 0 0 40 40; height: 200px; position: relative; transform: rotate(180deg);" xml:space="preserve">
+            <g>
+            <path d="M40,16.5c0,2.4,0,2.3-1.9,3.9c-2.7,2.3-5.3,4.6-8,6.9c-2.6,2.2-5.2,4.5-7.8,6.7c-0.6,0.5-1.2,1-1.8,1.6
+            c-0.4,0.4-0.8,0.4-1.2,0c-1.6-1.4-3.3-2.8-4.9-4.3c-3.2-2.8-6.5-5.6-9.7-8.4c-1.4-1.2-2.9-2.5-4.3-3.7c-0.3-0.3-0.5-0.6-0.4-1
+            c0-1.2,0-2.4,0-3.5c0-0.2,0-0.5,0.3-0.6C0.6,13.8,0.8,14,1,14.1c1.9,1.6,3.7,3.2,5.6,4.8c2.7,2.3,5.4,4.7,8.1,7
+            c1.7,1.4,3.3,2.8,5,4.3c0.3,0.3,0.5,0.2,0.8,0c2.4-2.1,4.8-4.2,7.2-6.3c2.5-2.2,5-4.3,7.5-6.5c1.3-1.1,2.6-2.2,3.9-3.4
+            c0.2-0.2,0.4-0.4,0.7-0.3c0.3,0.1,0.3,0.4,0.3,0.7C40,15.2,40,15.9,40,16.5z" fill="#fff">
+            <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,25; 0,0" dur="1s" repeatCount="indefinite" />
+        </path>
+            <path d="M40,6.8c0,2.4,0,2.3-1.9,3.9c-2.7,2.3-5.3,4.6-8,6.9c-2.6,2.2-5.2,4.5-7.8,6.7c-0.6,0.5-1.2,1-1.8,1.6
+            c-0.4,0.4-0.8,0.4-1.2,0c-1.6-1.4-3.3-2.8-4.9-4.3C11.2,18.8,8,16,4.8,13.2c-1.4-1.2-2.9-2.5-4.3-3.7C0.1,9.2,0,8.8,0,8.4
+            C0,7.2,0,6,0,4.9c0-0.2,0-0.5,0.3-0.6C0.6,4.1,0.8,4.3,1,4.5c1.9,1.6,3.7,3.2,5.6,4.8c2.7,2.3,5.4,4.7,8.1,7c1.7,1.4,3.3,2.8,5,4.3
+            c0.3,0.3,0.5,0.2,0.8,0c2.4-2.1,4.8-4.2,7.2-6.3c2.5-2.2,5-4.3,7.5-6.5c1.3-1.1,2.6-2.2,3.9-3.4c0.2-0.2,0.4-0.4,0.7-0.3
+            c0.3,0.1,0.3,0.4,0.3,0.7C40,4.4,40,4.7,40,4.9C40,5.6,40,6.2,40,6.8z" fill="#fff">
+            <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,25; 0,0" dur="1s" repeatCount="indefinite" />
+        </path>
+    </g>
+</svg>
+        </div>
+    </div>
+
+    <div class="debug" style="position: absolute; left: 20px; top: 60px; right: 20px; bottom: 60px; display: none">
+        <div>uid: <span id="uid"></span></div>
+        <div>block: <span id="block"></span></div>
+        <div>isError: <span id="isError"></span></div>
+        <div>isValue: <span id="isValue"></span></div>
+        <div>checkGpio: <span id="checkGpio"></span></div>
+        <div>GPIO: <span id="state"></span></div>
+        <div>Wiegand HEX: <span id="wiegand"></span></div>
+        <div>Wiegand DEC: <span id="wiegand1"></span></div>
+    </div>
+</body>
+</html>

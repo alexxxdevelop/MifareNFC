@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin>
+    <uses-policies>
+        <disable-keyguard-features/>
+        <!-- <disable-keyguard-features/>
+         <reset-password />
+         <wipe-data />
+         <expire-password />-->
+    </uses-policies>
+</device-admin>
